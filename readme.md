@@ -39,8 +39,8 @@ Redux Toolkit makes it easier to write good Redux applications and speeds up dev
 4. Rewrite this React class Based component into a react functional component
 
 `
-    import React, { useEffect} from "react";
-    
+import React, { useEffect} from "react";
+
     export default function Post {
 
         const [posts, setPost ] = React.useState([]);
@@ -78,8 +78,8 @@ Redux Toolkit makes it easier to write good Redux applications and speeds up dev
 
 3. How would you implement a Loging functionality that only logs in users saved in the database? (Explain no code)
 
-Establishing a connection to a your database and selecting rows using SQL queries.
-Implementing GET and POST requests with programming languages and it's framework.
-Designing a login form with CSS.
-Implementing validation that will ensure the captured data is valid.
-Leveraging sessions, which will determine whether a user is logged in or not.
+Establishing a connection to a my database and selecting rows using SQL queries.
+Implement GET and POST requests with programming languages and it's framework.
+Design a login form with CSS and Reactjs.
+Implement validation that will ensure the captured data is valid.
+Leveraging sessions with express-session, which will determine whether a user is logged in or not.
