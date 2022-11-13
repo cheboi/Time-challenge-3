@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript prompt() method</title>
+  </head>
+
+  <body style="text-align: center">
+    <h1 style="color: red"></h1>
+    <h2>sum of the numbers</h2>
+
+    <button onclick="fun()">Compute</button>
+    <p id="para"></p>
+    <script>
+      function fun() {
+        var a = prompt("Enter number to seperate with commas");
+        var sumArray = a.split(",");
+        let result = 0;
+
+        for (let i = 0; i < sumArray.length; i++) {
+          result += parseInt(sumArray[i]);
+        }
+
+        console.log(result);
+      }
+    </script>
+  </body>
+</html>
