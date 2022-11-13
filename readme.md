@@ -39,26 +39,26 @@ Redux Toolkit makes it easier to write good Redux applications and speeds up dev
 4. Rewrite this React class Based component into a react functional component
 
 `
-import React, { useEffect} from "react";
+    import React, { useEffect} from "react";
+    
+    export default function Post {
 
-export default function Post {
+        const [posts, setPost ] = React.useState([]);
+        const [id, setId ] = React.useState(2);
 
-    const [posts, setPost ] = React.useState([]);
-    const [id, setId ] = React.useState(2);
+        useEffect (( prevstate) => {
+        if (prevstate.id !== setId) {
+        fetchPost();
+        }
+        fetchPost();
+        });
 
-    useEffect (( prevstate) => {
-    if (prevstate.id !== setId) {
-    fetchPost();
-    }
-    fetchPost();
-    });
-
-    const fetchPost = async () => {
-    const response = await fetch(
-    `https://jsonplaceholder.typicode.com/comments?postId=${id}`
-    );
-    const data = await response.json();
-    setPost({ posts: data });
+        const fetchPost = async () => {
+        const response = await fetch(
+        `https://jsonplaceholder.typicode.com/comments?postId=${id}`
+        );
+        const data = await response.json();
+        setPost({ posts: data });
     }
 
     return (
